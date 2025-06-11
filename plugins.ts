@@ -1,6 +1,5 @@
 import lightningcss from "lume/plugins/lightningcss.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
-import purgecss from "lume/plugins/purgecss.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import basePath from "lume/plugins/base_path.ts";
 import metas from "lume/plugins/metas.ts";
@@ -29,7 +28,6 @@ export default function (userOptions?: Options) {
     site
       .use(lightningcss())
       .use(minifyHTML())
-      .use(purgecss())
       .use(checkUrls())
       .use(basePath())
       .use(metas())
